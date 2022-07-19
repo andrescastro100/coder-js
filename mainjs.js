@@ -3,21 +3,34 @@
     alert("Valor de i es: " + i);
 }
 */
+class User {
+    constructor(nombre, edad, num) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.num = num;
+    }
+}
+let nomUser = prompt("Ingrese su nombre: ");
+let edadUser = prompt("Ingrese edad: ");
+let numUser = prompt("ingrese un numero de contacto");
 
-let edad=prompt("Ingresesu edad: "),bandera=1,calc=0;
-const vino=250, vodka=300, fernet=500, cerveza=200, gin=500;    
-if (edad >= 18){
+const User1 = new User(nomUser.toUpperCase(),edadUser,numUser);
+console.log(User1);
+let bandera=1,calc=0;
+const vino=250, vodka=300, fernet=500, cerveza=200, gin=500;   
+
+if ( User1.edad >= 18){
     while (bandera==1){
         select(vino, vodka, fernet, cerveza, gin);
     }
 }
 
 else{
-    alert("No cumple con la edad minima requerida");
+    alert("Hola " + User1.nombre + " te informamos que no cumples con la edad minima requerida");
 }
 
 function select (){
-    let cantidadvino=0,cantidadvodka=0,cantidadfernet=0,cantidadgin=0,cantidadcerveza=0;
+    let = cantidadvino=0,cantidadvodka=0,cantidadfernet=0,cantidadgin=0,cantidadcerveza=0;
     let opcion= prompt("Ingrese su bebida \n 1) vino: "+vino+"\n  2) vodka: "+vodka+"\n 3) fernet: "+fernet+"\n 4) gin: "+gin+"\n 5) cerveza: "+ cerveza);
 
     switch (opcion){
@@ -48,7 +61,7 @@ function select (){
         if(bandera==0){
             alert("Gracias por su compra su monto es $"+calc);
         }
-        else if(bandera !=0 && bandera !=1){
+        else if(bandera !=1 && bandera !=0){
             alert("Error");
         }
 }
